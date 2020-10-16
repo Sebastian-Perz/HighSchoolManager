@@ -1,0 +1,85 @@
+﻿@model IEnumerable<HighSchoolManager.Models.Division>
+<style>
+    body {
+        background-image: url(/Content/divisions-bg.png);
+    }
+
+    a {
+        color: darkblue;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+
+    td {
+        color: dimgrey;
+        font-family: 'Thasadith', sans-serif;
+        font-weight: 900;
+        font-size: 16px;
+    }
+
+    th {
+        color: black;
+        font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 18px;
+    }
+
+    p {
+        color: darkblue;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-family: 'Fira Sans Condensed', sans-serif;
+        color: black;
+        font-weight: 600;
+    }
+</style>
+@{
+    ViewBag.Title = "Divisions";
+}
+
+<h2>Divisions</h2>
+@if (User.IsInRole("Admin"))
+{
+    <h2>
+        @Html.ActionLink("Create a new division", "Create")
+    </h2>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Headmaster)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Headmaster.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            @if (User.IsInRole("Admin"))
+            {
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DivisionID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DivisionID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DivisionID })
+            </td>
+            }
+        </tr>
+    }
+
+</table>
