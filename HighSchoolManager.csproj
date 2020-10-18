@@ -238,6 +238,7 @@
     <Content Include="Content\notka.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\professors-bg.png" />
+    <Content Include="Content\samestyle.css" />
     <Content Include="Content\students-bg.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -262,7 +263,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Properties\PublishProfiles\shadysideacademywebsite - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ssaw - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

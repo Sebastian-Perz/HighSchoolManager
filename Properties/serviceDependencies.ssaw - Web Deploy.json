@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "mssql1": {
-      "resourceId": null,
       "type": "mssql.onprem",
       "connectionId": "DefaultConnection",
       "secretStore": "AzureAppSettings"
